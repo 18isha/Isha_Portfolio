@@ -303,6 +303,16 @@
       @media (prefers-reduced-motion: reduce) { .x-glow, .x-status::before { animation: none; } }
 
       .x-foot { margin-top: clamp(64px, 8vw, 96px); }
+      .x-books { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+      .x-book { display: flex; flex-direction: column; border: 1px solid var(--x-line); border-radius: 20px; background: var(--x-surface); overflow: hidden; text-decoration: none; color: inherit; transition: transform 300ms var(--ease-out), box-shadow 300ms var(--ease-out); }
+      .x-book:hover { transform: translateY(-6px); box-shadow: 0 24px 80px rgb(226 64 143 / 0.18); }
+      .x-book__cover { display: block; background: #0b1024; padding: 24px; text-align: center; }
+      .x-book__cover img { display: block; margin: 0 auto; width: auto; max-width: 100%; height: 340px; object-fit: contain; border-radius: 6px; box-shadow: 0 14px 40px rgb(0 0 0 / 0.5); }
+      .x-book__body { padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+      .x-book__body h3 { font: var(--weight-medium) 24px/1.15 var(--sans); letter-spacing: -0.01em; }
+      .x-book__body p { color: var(--text-secondary); }
+      .x-book__body .x-btn { align-self: flex-start; margin-top: auto; }
+      @media (max-width: 760px) { .x-books { grid-template-columns: 1fr; } .x-book__cover img { height: 300px; } }
     </style>
   </head>
   <body>
@@ -312,7 +322,7 @@
       <div class="x-nav__links">
         <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#patent">Patent</a
         ><a href="#research">Research</a
-        ><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+        ><a href="#books">Books</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
       </div>
     </nav>
     <div class="page" id="top">
@@ -501,9 +511,35 @@
           </article>
         </section>
 
+        <section class="x-sec" id="books" data-nav="Books">
+          <div class="x-head x-reveal">
+            <p class="x-kicker"><b>06</b>Books</p>
+            <h2>Stories told <em>in comics.</em></h2>
+            <p>Comic books I wrote and created. Tap a book to read it.</p>
+          </div>
+          <div class="x-books">
+            <a class="x-book x-reveal" href="Bhagavad_Gita_Comic.pdf" target="_blank" rel="noopener">
+              <div class="x-book__cover"><img src="gita_cover.jpg" alt="Cover of The Bhagavad Gita comic book" loading="lazy" /></div>
+              <div class="x-book__body">
+                <h3>The Bhagavad Gita</h3>
+                <p>18 life-changing lessons through comics. 40 pages.</p>
+                <span class="x-btn x-btn--sm">Read Book</span>
+              </div>
+            </a>
+            <a class="x-book x-reveal" href="Wings_of_Fire_Comic.pdf" target="_blank" rel="noopener">
+              <div class="x-book__cover"><img src="wf_cover.jpg" alt="Cover of the Wings of Fire comic book" loading="lazy" /></div>
+              <div class="x-book__body">
+                <h3>Wings of Fire</h3>
+                <p>The life of Dr. A.P.J. Abdul Kalam as a comic. 41 pages.</p>
+                <span class="x-btn x-btn--sm">Read Book</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
         <section class="x-sec" id="achievements" data-nav="Achievements">
           <div class="x-head x-reveal">
-            <p class="x-kicker"><b>06</b>Achievements &amp; leadership</p>
+            <p class="x-kicker"><b>07</b>Achievements &amp; leadership</p>
             <h2>Solving, shipping, <em>leading.</em></h2>
           </div>
           <div class="x-ach">
@@ -538,7 +574,7 @@
 
         <section class="x-sec" id="contact" data-nav="Contact">
           <div class="x-glow x-contact x-reveal">
-            <p class="x-kicker"><b>07</b>Contact</p>
+            <p class="x-kicker"><b>08</b>Contact</p>
             <h2>Let’s build something <em>together.</em></h2>
             <p style="color: var(--text-secondary); font: var(--type-lede); font-weight: var(--weight-regular)">Open to Software Development Engineer internships.</p>
             <a class="x-mail" href="mailto:isha.kasaraneni@gmail.com">isha.kasaraneni@gmail.com</a>
